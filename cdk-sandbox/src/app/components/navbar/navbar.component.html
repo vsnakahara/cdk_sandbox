@@ -1,4 +1,37 @@
-<header class="site-header">
+<mat-sidenav-container class="example-container">
+  <mat-sidenav
+    #sidenav
+    mode="side"
+    [(opened)]="opened"
+    class="side-nav"
+  >
+    <div class="sidenav-header-div">
+      <div class="blob">
+        <mat-icon>menu_book</mat-icon>
+      </div>
+    </div>
+    <mat-nav-list>
+      <a mat-list-item> Componente 1 </a>
+      <a mat-list-item> Componente 2 </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="example-sidenav-content">
+      <div
+        type="button"
+        class="header-button"
+        [ngClass]="{ opened: opened }"
+        mat-button
+        (click)="sidenav.toggle(); opened = !opened"
+      >
+        <mat-icon>{{ opened ? 'chevron_left' : 'chevron_right' }}</mat-icon>
+    </div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<!-- <header class="site-header">
   <div class="wrapper site-header__wrapper">
     <a href="#" class="brand">CDK Sandbox</a>
     <nav class="nav">
@@ -9,4 +42,4 @@
       </ul>
     </nav>
   </div>
-</header>   
+</header>    -->
