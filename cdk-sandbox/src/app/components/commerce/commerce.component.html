@@ -1,6 +1,21 @@
-<mat-grid-list cols="2" rowHeight="2:1">
-    <mat-grid-tile>1</mat-grid-tile>
-    <mat-grid-tile>2</mat-grid-tile>
-    <mat-grid-tile>3</mat-grid-tile>
-    <mat-grid-tile>4</mat-grid-tile>
-  </mat-grid-list>
+<mat-grid-list cols="4" >
+  <mat-grid-tile
+  colspan="1"
+  *ngFor="let item of items"
+    >
+    <mat-card class="example-card" >
+      <img
+        mat-card-image
+        src="{{item.img}}"
+        alt="Photo of a Shiba Inu"
+      />
+      <mat-card-content>
+        <p>
+          {{item.name}}
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button> <mat-icon>add_shopping_cart</mat-icon>Adicionar ao carrinho</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
