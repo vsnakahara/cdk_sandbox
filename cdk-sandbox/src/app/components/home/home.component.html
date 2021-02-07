@@ -1,0 +1,97 @@
+<!-- <div class="grid-div">
+  <mat-grid-list cols="2" rowHeight="2:1">
+    <mat-grid-tile><mat-card>Simple card!!!</mat-card></mat-grid-tile>
+    <mat-grid-tile><mat-card>Simple card!!!</mat-card></mat-grid-tile>
+    <mat-grid-tile><mat-card>Simple card!!!</mat-card></mat-grid-tile>
+    <mat-grid-tile><mat-card>Simple card!!!</mat-card></mat-grid-tile>
+  </mat-grid-list>
+</div> -->
+<div class="main-div">
+  <div class="item-div">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Shiba Inu</mat-card-title>
+        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+      </mat-card-header>
+      <img
+        mat-card-image
+        src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+        alt="Photo of a Shiba Inu"
+      />
+      <mat-card-content>
+        <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz
+          breeds of dog from Japan. A small, agile dog that copes very well with
+          mountainous terrain, the Shiba Inu was originally bred for hunting.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>LIKE</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  <div class="item-div">
+    <mat-card class="forms-card">
+      <form [formGroup]="options">
+        <!-- <mat-checkbox [formControl]="hideRequiredControl"
+          >Hide required marker</mat-checkbox
+        > -->
+        <div>
+          <label>Float label: </label>
+          <mat-radio-group [formControl]="floatLabelControl">
+            <mat-radio-button value="auto">Auto</mat-radio-button>
+            <mat-radio-button value="always">Always</mat-radio-button>
+          </mat-radio-group>
+        </div>
+
+        <mat-form-field
+          appearance="fill"
+          [hideRequiredMarker]="hideRequiredControl.value"
+          [floatLabel]="floatLabelControl.value"
+        >
+          <input matInput placeholder="Simple placeholder" required />
+        </mat-form-field>
+
+        <mat-form-field
+          appearance="fill"
+          [floatLabel]="floatLabelControl.value"
+        >
+          <mat-label>Both a label and a placeholder</mat-label>
+          <input matInput placeholder="Simple placeholder" />
+        </mat-form-field>
+
+        <mat-form-field
+          appearance="fill"
+          [hideRequiredMarker]="hideRequiredControl.value"
+          [floatLabel]="floatLabelControl.value"
+        >
+          <mat-select required>
+            <mat-option>-- None --</mat-option>
+            <mat-option value="option">Option</mat-option>
+          </mat-select>
+          <mat-label
+            ><mat-icon>favorite</mat-icon> <b> Fancy</b>
+            <i> label</i></mat-label
+          >
+        </mat-form-field>
+      </form>
+    </mat-card>
+  </div>
+
+  <div class="item-div">
+    <mat-card class="toggle-card">
+      <p>Slide Toggle using a simple NgModel.</p>
+
+      <mat-slide-toggle [(ngModel)]="isChecked"
+        >Slide Toggle Checked: {{ isChecked }}</mat-slide-toggle
+      >
+
+      <mat-slide-toggle>Enable Wifi</mat-slide-toggle>
+      <mat-slide-toggle>Accept Terms of Service</mat-slide-toggle>
+
+      <button mat-raised-button type="submit">Save Settings</button>
+    </mat-card>
+  </div>
+</div>

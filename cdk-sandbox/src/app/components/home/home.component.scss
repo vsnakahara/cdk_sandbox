@@ -1,0 +1,65 @@
+.grid-div {
+  height: 100%;
+  width: 100%;
+  mat-card {
+    max-width: 500px;
+  }
+}
+
+
+
+.example-header-image {
+  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+  background-size: cover;
+}
+
+.main-div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  .item-div {
+    padding: 30px;
+
+    .example-card {
+      max-width: 400px;
+    }
+
+    .forms-card {
+      max-width: 1000px;
+      mat-form-field {
+        width: 100%;
+        padding-top: 30px;
+        padding-right: 30px;
+      }
+    }
+
+    .toggle-card {
+      display: flex;
+      flex-direction: column;
+      mat-slide-toggle {
+        padding-bottom: 15px;
+        padding-top: 15px;
+      }
+    }
+  }
+}
+
+.example-container .mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+.example-container .mat-form-field {
+  width: 220px;
+}
+
+.example-container form {
+  margin-bottom: 20px;
+}
+
+.example-container form > * {
+  margin: 5px 0;
+}
+
+.example-container .mat-radio-button {
+  margin: 0 12px;
+}

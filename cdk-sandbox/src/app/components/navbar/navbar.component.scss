@@ -56,8 +56,9 @@
 
 .example-sidenav-content {
   background-color: white;
-  display: flex;
+  // display: flex;
   height: 100%;
+  // width: 100%;
   background-image: url(../../../assets/images/pattern.jpg);
   background-repeat: repeat;
   // opacity: 0;
@@ -75,17 +76,17 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  height: 100%;
-  width: 80px;
+  // height: 100%;
+  // width: 80px;
   background-color: rgba(3, 217, 255, 1);
   box-shadow: black;
   &.opened {
-    width: 30px;
-    mat-icon {
-      height: 30px;
-      width: 30px;
-      font-size: 30px;
-    }
+    // width: 30px;
+    // mat-icon {
+    //   height: 30px;
+    //   width: 30px;
+    //   font-size: 30px;
+    // }
   }
   mat-icon {
     cursor: pointer;
@@ -99,4 +100,9 @@
 .side-nav {
   // height: 100%;
   // background-color: white;
+}
+
+.example-container {
+  z-index: 0;
+  position: absolute;
 }
