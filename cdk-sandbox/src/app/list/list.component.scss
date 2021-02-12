@@ -1,3 +1,40 @@
-.white-span {
-    color: black
+:host {
+  width: 100%;
+
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+  }
+  .mat-list-base {
+    background-color: lightgoldenrodyellow;
+    opacity: 0.8;
+  }
+  .item {
+    border: 1px dotted dodgerblue;
+    height: 50px;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .vs-viewport {
+    height: 520px;
+    width: 450px;
+    border: 1px solid black;
+    overflow-x: hidden;
+  }
+
+  .portal-outlet {
+    border: 1px dashed black;
+    height: 520px;
+    width: 450px;
+  }
+
+  .pokemon {
+    color: red;
+  }
 }
+
+

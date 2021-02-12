@@ -1,8 +1,37 @@
+<div class="pokemon">List size: {{ list?.results.length }}
 
-<span class="white-span">List works, but it is all white!</span>
+</div>
+<div class="container">
+  <mat-list dense #itemsList>
+    <cdk-virtual-scroll-viewport #vs [itemSize]="50" class="vs-viewport" (scrolledIndexChange)="watchIndex($event)">
 
-<ul>
-    <li>Teste 1</li>
-    <li>Teste 2</li>
-    <li>Teste 3</li>
-</ul>
+      <a
+      *cdkVirtualFor="let item of list?.results; let index = index"
+        mat-list-item
+        class="item"
+        (click)="getPokemon(item.url)"
+      >
+        {{index}} - {{ (item.name | titlecase) || "Loading..." }}
+      </a>
+    </cdk-virtual-scroll-viewport>
+  </mat-list>
+  <!-- <mat-selection-list>
+    <mat-list-option *ngFor="let item of items; let index = index">
+      {{ item }}
+    </mat-list-option>
+  </mat-selection-list> -->
+
+  <div class="portal-outlet">
+    <ng-template [cdkPortalOutlet]="selectedPortal"></ng-template>
+  </div>
+
+  <ng-template #templatePortalContent>
+    <div class="pokemon">
+      {{ selectedPokemon.id }} - {{ selectedPokemon.name }} - {{ selectedPokemon?.height }}  - {{selectedPokemon.weight}}
+      <img width="150px" height="150px" [src]="selectedPokemon.sprites.other.dream_world.front_default"/>
+
+      <br>
+      <pre>{{ selectedPokemon.types | json }}</pre>
+    </div>
+  </ng-template>
+</div>

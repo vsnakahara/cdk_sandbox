@@ -1,15 +1,20 @@
-import { NgModule } from '@angular/core';
+import { PortalModule } from '@angular/cdk/portal';
+import { ScrollingModule } from "@angular/cdk/scrolling";
 import { CommonModule } from '@angular/common';
-
-import { ListRoutingModule } from './list-routing.module';
-import { ListComponent } from './list.component';
+import { NgModule } from "@angular/core";
+import { MatListModule } from '@angular/material/list';
+import { ListRoutingModule } from "./list-routing.module";
+import { ListComponent } from "./list.component";
 
 
 @NgModule({
-  declarations: [ListComponent],
+  declarations: [ListComponent], 
   imports: [
     CommonModule,
-    ListRoutingModule
-  ]
+    ListRoutingModule,
+    ScrollingModule,
+    MatListModule,
+    PortalModule,
+  ],
 })
-export class ListModule { }
+export class ListModule {}
